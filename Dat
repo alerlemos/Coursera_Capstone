@@ -1,0 +1,114 @@
+The dataset used for this project is the dataset "Collisions—All Years", provided by the Seattle Department of Transportation - Traffic Management Division.
+This dataset contains records of all types of collisions that happened since 2004 in the city of Seattle.
+
+It contains 37 attributes:
+
+1 - OBJECTID: ESRI unique identifier. Type: ObjectID;
+2 - SHAPE: ESRI geometry field. Type: Geometry;
+3 - INCKEY: A unique key for the incident. Type: Long;
+4 - COLDETKEY: Secondary key for the incident. Type: Long;
+5 - ADDRTYPE: Collision address type: Alley, Block, Intersection. Type: Text, 12;
+6 - INTKEY: Key that corresponds to the intersection associated with a collision. Type: Double;
+7 - LOCATION: Description of the general location of the collision. Type: Text, 255;
+8 - EXCEPTRSNCODE: . Type: Text, 10;
+9 - EXCEPTRSNDESC: .Type: Text, 300;
+10 - SEVERITYDESC: A detailed description of the severity of the collision. Type: Text; 
+11 - COLLISIONTYPE: Collision type. Type: Text, 300;
+12 - PERSONCOUNT: The total number of people involved in the collision. Type:Double;
+13 - PEDCOUNT: The number of pedestrians involved in the collision. This is entered by the state. Type: Double
+14 - PEDCYLCOUNT: The number of bicycles involved in the collision. This is entered by the state. Type: Double;
+15 - VEHCOUNT: The number of vehicles involved in the collision. This is entered by the state. Type: Double;
+16 - INJURIES: The number of total injuries in the collision. This is entered by the state. Type: Double;
+17 - SERIOUSINJURIES: The number of serious injuries in the collision. This is entered by the state. Type: Double;
+18 - FATALITIES: The number of fatalities in the collision. This is entered by the state. Type: Double;
+19 - INCDATE: The date of the incident. Type: Date;
+20 - INCDTTM: The date and time of the incident. Type: Text, 30;
+21 - JUNCTIONTYPE: Category of junction at which collision took place. Type: Text, 300;
+22 - SDOT_COLCODE: A code given to the collision by SDOT. Type: Text, 10;
+23 - SDOT_COLDESC: A description of the collision corresponding to the collision code. Type: Text, 300;
+24 - INATTENTIONIND: Whether or not collision was due to inattention (Y/N). Type: Text, 1;
+25 - UNDERINFL: Whether or not a driver involved was under the influence of drugs or alcohol. Type: Text, 10;
+26 - WEATHER: A description of the weather conditions during the time of the collision. Type: Text, 300;
+27 - ROADCOND:The condition of the road during the collision. Type: Text, 300;
+28 - LIGHTCOND: The light conditions during the collision. Type: Text, 300;
+29 - PEDROWNOTGRNT: Whether or not the pedestrian right of way was not granted (Y/N). Type: Text, 1;
+30 - SDOTCOLNUM: A number given to the collision by SDOT. Type: Text, 10;
+31 - SPEEDING: Whether or not speeding was a factor in the collision (Y/N). Type: Text, 1;
+32 - ST_COLCODE: A code provided by the state that describes the collision. For more information about these codes, please see the State Collision Code Dictionary at the end. Type: Text, 10;
+33 - ST_COLDESC: A description that corresponds to the state’s coding designation. Type: Text, 300;
+34 - SEGLANEKEY: A key for the lane segment in which the collision occurred. Type: Long;
+35 - CROSSWALKKEY: A key for the crosswalk at which the collision occurred. Type: Long; 
+36 - HITPARKEDCAR: Whether or not the collision involved hitting a parked car. (Y/N). Type: Text, 1.
+37 - SEVERITYCODE: A code that corresponds to the severity of the collision: 0-unknown, 1-prop damage, 2-injury, 2b-serious injury, 3-fatality. Type: Text, 100.
+
+There are several attributes whose purpose is to identify the collision and that can be disconsidered in the analysis.
+
+
+
+
+
+
+
+
+State Collision Code Dictionary
+0 - Vehicle Going Straight Hits Pedestrian
+1 - Vehicle Turning Right Hits Pedestrian
+2 - Vehicle Turning Left Hits Pedestrian
+3 - Vehicle Backing Hits Pedestrian
+4 - Vehicle Hits Pedestrian - All Other Actions
+5 - Vehicle Hits Pedestrian - Actions Not Stated
+10 - Entering At Angle
+11 - From Same Direction -Both Going Straight-Both Moving- Sideswipe
+12 - From Same Direction -Both Going Straight-One Stopped- Sideswipe
+13 - From Same Direction - Both Going Straight - Both Moving - Rear End 
+14 - From Same Direction - Both Going Straight - One Stopped - Rear End
+15 - From Same Direction - One Left Turn - One Straight
+16 - From Same Direction - One Right Turn - One Straight
+19 - One Car Entering Parked Position
+20 - One Car Leaving Parked Position
+21 - One Car Entering Driveway Access
+22 - One Car Leaving Driveway Access
+23 - From Same Direction - All Others
+24 - From Opposite Direction - Both Moving - Head On
+25 - From Opposite Direction - One Stopped - Head On
+26 - From Opposite Direction - Both Going Straight - sideswipe
+27 - From Opposite Direction - Both Going Straight - One Stopped - sideswipe
+28 - From Opposite Direction - One Left Turn - One Straight
+29 - From Opposite Direction - One Left Turn - One Right Turn
+30 - From Opposite Direction - All Others
+31 - Not Stated
+32 - One Parked - One Moving
+40 - Train Struck Moving Vehicle
+41 - Train Struck Stopped or Stalled Vehicle
+42 - Vehicle Struck Moving Train
+43 - Vehicle Struck Stopped Train
+44 - Unicycle
+45 - Bicycle
+46 - Tricycle
+47 - Domestic Animal (horse, cow, sheep, etc)
+48 - Domestic Animal Other (Cat, Dog etc)
+49 - Non Domestic Animal (deer, bear, elk, etc)
+50 - Struck Fixed Object
+51 - Struck Other Object
+52 - Vehicle Overturned
+53 - Person Fell, Jumped, or was Pushed From Vehicle
+54 - Fire Started In Vehicle
+55 - Accidently Overcame By Carbon Monoxide Poison
+56 - Breakage Of Any Part Of the Vehicle Resulting In Injury or in Further Property Damage
+57 - All Other Non-Collisions
+60 - Vehicle Hits State Road or Construction Machinery
+61 - Vehicle Struck By State Road or Construction Machinery
+62 - Vehicle Hits County Road or Construction Machinery
+63 - Vehicle Struck By County Road or Construction Machinery
+64 - Vehicle Hits City Road or Construction Machinery
+65 - Vehicle Struck By City Road or Construction Machinery
+66 - Vehicle Hits Other Road or Construction Machinery
+67 - Vehicle Struck by Other Road or Construction Machinery
+71 - Same Direction - Both Turning Right - Both Moving - Sideswipe
+72 - Same Direction - Both Turning Right - One Stopped - Sideswipe
+73 - Same Direction - Both Turning Right - Both Moving - Rear End
+74 - Same Direction - Both Turning Right - One Stopped - Rear End
+81 - Same Direction - Both Turning Left - Both Moving - Sideswipe
+82 - Same Direction - Both Turning Left - One Stopped - Sideswipe
+83 - Same Direction - Both Turning Left - Both Moving - Rear End
+84 - Same Direction - Both Turning Left - One Stopped - Rear End 
