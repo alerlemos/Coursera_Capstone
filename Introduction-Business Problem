@@ -1,5 +1,12 @@
-Introdução:
+Introduction:
+Car accidents are always a big problem in any major city. Being places with lots of traffic, they tend to have a great number of car crashes troughtout the year. 
+This means a lot of money spent in government property being destroyed, people getting injured and, in the worst case, even dying because of these accidents.
 
+Being able to predict severity of an accident based on some informations about it, before reaching the crash site, can improve how hospitals and police departments react to the situation. 
+Factors like weather, vehicles involved in the accident and light condition, can indicate the probable severity of the crash, and then, hospitals can be better prepared to receive the injured people.
+Police and traffic deparments can use the same data to reinforce caution in traffic to minimize car accidents and their severity.
+This approach can help save a lot of money in government property and, most important, it can help save human lives.
 
-Problema:
-
+Bussines Problem:
+This project's objective is to be able to predict the severity of the accidents based on information that can be obtained before any police officer or ambulance reach the crash site.
+By doing this, the people responsible in dealing with the situation can be better prepared to do so. 
