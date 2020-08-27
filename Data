@@ -41,16 +41,24 @@ It contains 37 attributes:
 36 - HITPARKEDCAR: Whether or not the collision involved hitting a parked car. (Y/N). Type: Text, 1.
 37 - SEVERITYCODE: A code that corresponds to the severity of the collision: 0-unknown, 1-prop damage, 2-injury, 2b-serious injury, 3-fatality. Type: Text, 100.
 
-There are several attributes whose purpose is to identify the collision and that can be disconsidered in the analysis.
+There are several attributes that can be disconsidered in the analysis, whose only purpose is to identify the collision.
 
+The attributes that will be used in the analysis are: 
+COLLISIONTYPE, PERSONCOUNT, VEHCOUNT, JUNCTIONTYPE, WEATHER, ROADCOND, LIGHTCOND, SPEEDING and HITPARKEDCAR
+The attribute target (label) is: 
+SEVERITYCODE
 
+At first, each attribute will be used separetly to make the classification, and the results will be analised. Then, they will be combined to see if the results improve or not.
+Finally, the best attributes/combinations will be selected as inputs to the model.
 
+The data will first be treated, and the required transformations will be made to optimize the information contained in the dataset that will be used in creating the model.
 
 
 
 
 
 State Collision Code Dictionary
+
 0 - Vehicle Going Straight Hits Pedestrian
 1 - Vehicle Turning Right Hits Pedestrian
 2 - Vehicle Turning Left Hits Pedestrian
